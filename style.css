@@ -1,0 +1,71 @@
+:root {
+    --lamp-height: 50vh;
+    --tall-height: calc(0.5 * var(--lamp-height));
+    --short-height: calc(0.5 * var(--tall-height));
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    display: grid;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    background-color: #eee;
+    height: var(--lamp-height);
+    display: grid;
+    align-items: flex-end;
+}
+
+.container > * {
+    position: absolute;
+    width: 5px;
+    transform: translate(-50%);
+    left: 50%;
+}
+
+.lamp {
+    background-color: red;
+    border-top: solid 10px yellow;
+    box-sizing: border-box;
+    height: var(--lamp-height);
+}
+
+.tall {
+    height: var(--tall-height);
+}
+.short {
+    height: var(--short-height);
+}
+
+.people {
+    background-color: #88a;
+    display: grid;
+    align-items: flex-end;
+}
+
+.shadow {
+    background-color: black;
+    height: 5px;
+}
+
+.short .shadow {
+    transform-origin: center left;
+    transform: rotate(180deg);
+}
+
+.tall .shadow {
+    margin-left: 5px;
+}
+
+/* OTHER STUFF */
+button {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+
