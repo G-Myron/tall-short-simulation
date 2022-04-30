@@ -47,4 +47,6 @@ function resize(value) {
     document.querySelector('html').style.setProperty("--lamp-height", value+'vh');
 }
 
+document.querySelector('html').removeChild(document.querySelector('html').lastElementChild)
+
 
