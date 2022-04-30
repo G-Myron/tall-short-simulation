@@ -1,4 +1,4 @@
-const step = .75;
+const step = .5;
 
 // ---------- PEOPLE -----------
 
@@ -6,8 +6,8 @@ const tall = document.querySelector(".tall"), short = document.querySelector(".s
 
 // tall.style.left = getComputedStyle(tall).left, short.style.left = getComputedStyle(short).left; // in px
 
-document.onmousedown = ()=>{setin = setInterval(move, 100);};
-document.onmouseup = ()=>{clearInterval(setin);};
+document.onmousedown = document.ontouchstart = ()=>{setin = setInterval(move, 60);};
+document.onmouseup = document.ontouchend = ()=>{clearInterval(setin);};
 
 function move() {
     tall.style.left = parseFloat(tall.style.left)+step+'%';
