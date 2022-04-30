@@ -4,9 +4,8 @@
     --short-height: calc(0.5 * var(--tall-height));
 }
 
-body, html {
-    min-height: 90vh;
-    height: 100%;
+body {
+    height: 100vh;
     margin: 0;
     display: grid;
     align-items: center;
@@ -50,14 +49,24 @@ body, html {
 .short {
     height: var(--short-height);
 }
+.tall::before, .short::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width:  15px;
+    height: 15px;
+    border-radius: 50%;
+}
 
-.people {
+.people, .people::before {
     background-color: #88a;
-    display: grid;
-    align-items: flex-end;
 }
 
 .shadow {
+    position: absolute;
+    bottom: 0;
     background-color: black;
     height: 5px;
 }
@@ -97,8 +106,6 @@ input {
 }
 
 button {
-    /* left: 50%;
-    transform: translate(-50%); */
     min-width: 10rem;
     background-color: #000;
     color: white;
