@@ -107,6 +107,6 @@ button {
 }
 
 .grammarly-desktop-integration {
-    display: none;
+    display: none !important;
 }
 
