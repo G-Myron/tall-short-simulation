@@ -106,4 +106,7 @@ button {
     cursor: pointer;
 }
 
+.grammarly-desktop-integration {
+    display: none;
+}
 
