@@ -5,6 +5,7 @@
 }
 
 body, html {
+    min-height: 90vh;
     height: 100%;
     margin: 0;
     display: grid;
@@ -106,7 +107,4 @@ button {
     cursor: pointer;
 }
 
-.grammarly-desktop-integration {
-    display: none !important;
-}
 
